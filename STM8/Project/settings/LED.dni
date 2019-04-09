@@ -1,0 +1,76 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=1414586315
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[Trace1]
+Enabled=0
+ShowSource=1
+[Trace Window]
+Trace Instruction=1
+Trace Interrupt Handler=1
+Trace Data Read=1
+Trace Data Write=1
+Trace Stack Read=1
+Trace Stack Write=1
+Trace Dma Read=1
+Trace Dma Write=1
+Trace Time Count Event=1
+Trace Memory Access Stall=1
+Trace External Input=1
+Trace BEM Event=1
+Trace Discarded=1
+Trace Interrupted=1
+Trace Non Event=1
+[array_types]
+Fmt0=u8[16]	4	0
+Fmt1=u8[18]	4	0
+Fmt2=u8[4]	4	0
+Fmt3=u8[7]	4	0
+[watch_formats]
+Fmt0={W}0:OEMInfor.ID	4	0
+Fmt1={W}0:RegH	4	0
+Fmt2={W}0:RegL	4	0
+Fmt3={W}0:addr	4	0
+Fmt4={W}0:len	3	0
+Fmt5={W}0:raddr	4	0
+Fmt6={W}0:waddr	4	0
+[DataSample]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Breakpoints]
+Bp0=_ "STD_CODE" "" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "0x008647" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "" 0 0 0 0 "" 0 ""
+Bp3=_ "STD_CODE" "" 0 0 0 0 "" 0 ""
+Count=4
+[Aliases]
+A0=_ "E:\work\STM8\¿÷ Ω-µ∆\LETS_WYLedV3.10R1_20140430\App\EEROM\eeprom.c" ""
+A1=_ "E:\work\STM8\¿÷ Ω-µ∆\LETS_WYLedV3.10R1_20140430\App\MainTaskApp\MainTaskApp.c" ""
+A2=_ "E:\work\STM8\¿÷ Ω-µ∆\LETS_WYLedV3.10R1_20140430\App\WirlessApp\WirlessApp.c" ""
+A3=_ "E:\work\STM8\¿÷ Ω-µ∆\LETS_WYLedV3.10R1_20140430\App\main.c" ""
+A4=_ "E:\work\STM8\¿÷ Ω-µ∆\LETS_WYLedV3.10R1_20140430\App\stm8s_user.c" ""
+A5=_ "E:\work\STM8\¿÷ Ω-µ∆\LETS_WYLedV3.10R1_20140430\STM8S_StdPeriph_Driver\src\stm8s_tim2.c" ""
+A6=_ "E:\work\STM8\¿÷ Ω-µ∆\À´œÚ\HS6200\LETS_WYLedV1.00R4_201500106\App\main.c" ""
+Count=7
+SuppressDialog=1

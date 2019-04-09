@@ -1,0 +1,106 @@
+
+#include "LED_driver.h"
+#include <stdlib.h>
+
+
+
+
+
+/*******************************************************************************
+* 名称: 
+* 功能: 
+* 形参: 
+* 返回: 无
+* 说明: 
+*******************************************************************************/
+void Motor_DriverInit(void)
+{
+	  //脉冲输出引脚
+	  GPIO_Init(GPIOD, GPIO_PIN_3, GPIO_MODE_OUT_PP_LOW_FAST); //测试用引脚  
+	  GPIO_Init(GPIOC, GPIO_PIN_1, GPIO_MODE_OUT_PP_LOW_FAST);
+	  GPIO_Init(GPIOC, GPIO_PIN_2, GPIO_MODE_OUT_PP_LOW_FAST);
+      
+      //电机2方向控制
+	  GPIO_Init(GPIOC, GPIO_PIN_3, GPIO_MODE_OUT_PP_LOW_FAST);
+      //LED灯
+	  GPIO_Init(GPIOC, GPIO_PIN_4, GPIO_MODE_OUT_PP_LOW_FAST);
+      
+	  GPIO_WriteLow(GPIOD, GPIO_PIN_3);
+	  GPIO_WriteLow(GPIOC, GPIO_PIN_1);
+	  GPIO_WriteLow(GPIOC, GPIO_PIN_2);
+	  GPIO_WriteLow(GPIOC, GPIO_PIN_3);
+	  GPIO_WriteLow(GPIOC, GPIO_PIN_4);
+      //GPIO_WriteHigh(GPIOC, GPIO_PIN_3);
+	  //零点检测引脚
+	  GPIO_Init(GPIOB, GPIO_PIN_0, GPIO_MODE_IN_PU_NO_IT); //电机1零点检测
+	  GPIO_Init(GPIOB, GPIO_PIN_1, GPIO_MODE_IN_PU_NO_IT); //电机2 上端零点检测
+	  GPIO_Init(GPIOB, GPIO_PIN_2, GPIO_MODE_IN_PU_NO_IT); //电机2 下端零点检测
+	
+	//TIMER2
+//	GPIO_Init(GPIOD, GPIO_PIN_3, GPIO_MODE_OUT_PP_LOW_SLOW);
+//	GPIO_Init(GPIOD, GPIO_PIN_4, GPIO_MODE_OUT_PP_LOW_SLOW);
+
+//	//TIMER1
+//	GPIO_Init(GPIOC, GPIO_PIN_1, GPIO_MODE_OUT_PP_LOW_SLOW);
+//	GPIO_Init(GPIOC, GPIO_PIN_2, GPIO_MODE_OUT_PP_LOW_SLOW);
+//	GPIO_Init(GPIOC, GPIO_PIN_3, GPIO_MODE_OUT_PP_LOW_SLOW);
+
+//	TIM2_DeInit();
+//	TIM2_TimeBaseInit(TIM2_PRESCALER_1, 1600);		//频率改变 此值
+
+//	//定时器2	分频
+//	TIM2->PSCR			= (uint8_t) (TIM2_PRESCALER_1); //TIM2_PRESCALER_1
+
+//	//设定重载值
+//	TIM2->ARRH			= (uint8_t) (160 >> 8); 	//LED_PERIOD
+//	TIM2->ARRL			= (uint8_t) (160);
+
+
+//	TIM2_OC1Init(TIM2_OCMODE_TOGGLE, TIM2_OUTPUTSTATE_ENABLE, 160, TIM2_OCPOLARITY_HIGH);
+//	TIM2_OC2Init(TIM2_OCMODE_TOGGLE, TIM2_OUTPUTSTATE_ENABLE, 160, TIM2_OCPOLARITY_HIGH);
+//	TIM2_CCxCmd(TIM2_CHANNEL_1, ENABLE);
+//	TIM2_CCxCmd(TIM2_CHANNEL_2, ENABLE);
+
+//	//重载使能
+//	TIM2->CR1			|= (uint8_t)
+//	TIM2_CR1_ARPE;									//TIM_ARRPreloadConfig(ENABLE);
+
+//	//定时器2使能
+//	TIM2->CR1			|= (uint8_t)
+//	TIM2_CR1_CEN;									//TIM2_Cmd(ENABLE);
+
+//	TIM2->CCER2 		|= (uint8_t) ((uint8_t) (TIM2_OUTPUTSTATE_ENABLE & (uint8_t) TIM2_CCER1_CC2E));
+
+
+
+//	//***************************TIMER1**********************************************
+//	//TIMER1
+//	TIM1_DeInit();
+//	IM1_TimeBaseInit(0, TIM1_COUNTERMODE_UP, 1600, 0); //频率改变 此值
+
+
+
+//	TIM1_OC1Init(TIM1_OCMODE_TOGGLE, TIM1_OUTPUTSTATE_ENABLE, TIM1_OUTPUTNSTATE_ENABLE, 
+//		160, TIM1_OCPOLARITY_HIGH, TIM1_OCNPOLARITY_HIGH, TIM1_OCIDLESTATE_SET, TIM1_OCNIDLESTATE_SET);
+
+//	TIM1_OC2Init(TIM1_OCMODE_TOGGLE, TIM1_OUTPUTSTATE_ENABLE, TIM1_OUTPUTNSTATE_ENABLE, 
+//		160, TIM1_OCPOLARITY_HIGH, TIM1_OCNPOLARITY_HIGH, TIM1_OCIDLESTATE_SET, TIM1_OCNIDLESTATE_SET);
+
+//	TIM1_OC3Init(TIM1_OCMODE_TOGGLE, TIM1_OUTPUTSTATE_ENABLE, TIM1_OUTPUTNSTATE_ENABLE, 
+//		160, TIM1_OCPOLARITY_HIGH, TIM1_OCNPOLARITY_HIGH, TIM1_OCIDLESTATE_SET, TIM1_OCNIDLESTATE_SET);
+
+//  TIM1_CCxNCmd(TIM1_CHANNEL_1, ENABLE);
+//  TIM1_CCxNCmd(TIM1_CHANNEL_2, ENABLE);
+//  TIM1_CCxNCmd(TIM1_CHANNEL_3, ENABLE);
+//	TIM1_OC1PreloadConfig(ENABLE);
+//	TIM1_OC2PreloadConfig(ENABLE);
+//	TIM1_OC3PreloadConfig(ENABLE);
+
+//	TIM1_ARRPreloadConfig(ENABLE);
+//	TIM1_CtrlPWMOutputs(ENABLE);					/* 使能TIM1输出 */
+//	TIM1_Cmd(ENABLE);								/* TIM1 counter 使能 DISABLE*/
+//	TIM2_Cmd(ENABLE);
+}
+
+
+
